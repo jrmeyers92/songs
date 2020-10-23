@@ -6,3 +6,11 @@ export const songReducer = () => {
 		{ title: "phone home", duration: "4:43" },
 	];
 };
+
+export const selectedSongReduce = (selectedSong = null, action) => {
+	if (action.type === "SONG_SELECTED") {
+		return action.payload;
+	}
+
+	return selectedSong;
+};
